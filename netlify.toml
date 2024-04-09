@@ -1,4 +1,4 @@
 [build]
 base = "frontend/"
 publish = "dist/frontend"
-command = "npx ng build --prod"
+
