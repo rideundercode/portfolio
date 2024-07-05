@@ -1,0 +1,90 @@
+<div class="content-card-one">
+  <h2>What do you want to improve </h2>
+  <select [(ngModel)]="selectedOption" (change)="onSelectChange()" class="custom-select">
+    <option value="" disabled selected>Select your Technology</option>
+    <option value="java">Java</option>
+    <option value="springboot">Spring Boot</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS/bootstrap</option>
+    <option value="javascript">Javascript</option>
+    <option value="angular">Angular/Typescript</option>
+  </select>
+
+
+  <div *ngIf="selectedOption == 'java' " class="technology-details">
+    <img src="../../../assets/Java_Exemple.png" alt="Java" class="tech-image">
+    <p>Bases de Java:</p>
+    <ul>
+      <li>Syntaxe de base: Variables, types de données, opérateurs, etc.</li>
+      <li>Structures de contrôle: Boucles for, while, do-while et conditions (if, switch).</li>
+      <li>Gestion des exceptions: try, catch, finally, throw, et throws.</li>
+    </ul>
+
+    <p>Programmation orientée objet (POO):</p>
+    <ul>
+      <li>Classes et objets: Définition de classes, création d'objets, méthodes, et constructeurs.</li>
+      <li>Encapsulation: Utilisation de modificateurs d'accès (private, public, protected).</li>
+      <li>Héritage: Création de sous-classes et utilisation de l'héritage pour réutiliser du code.</li>
+      <li>Polymorphisme: Surcharge et redéfinition de méthodes.</li>
+    </ul>
+
+    <p>Collections en Java:</p>
+    <ul>
+      <li>Comprendre les interfaces Collection, List, Set, et Map.</li>
+      <li>Utilisation des classes implémentant ces interfaces comme ArrayList, HashSet, et HashMap.</li>
+    </ul>
+
+  </div>
+  
+  <div *ngIf="selectedOption == 'springboot' "  class="technology-details">
+    <img src="../../../assets/Spring_Example.png" alt="Springboot" class="tech-image">
+    <p>Introduction à Spring Boot :</p>
+    <ul>
+      <li>Comprendre le principe de "convention plutôt que configuration".</li>
+      <li>Installation et configuration de l'environnement de développement.</li>
+      <li>Création d'un projet Spring Boot simple avec Spring Initializr.</li>
+    </ul>
+
+    <p>Les fondamentaux de Spring Boot :</p>
+    <ul>
+      <li>Compréhension du Spring Framework et de son écosystème.</li>
+      <li>Injection de dépendances (DI) et inversion de contrôle (IoC).</li>
+      <li>Configuration de l'application : fichiers properties et YAML.</li>
+    </ul>
+
+    <p>Développement web avec Spring Boot :</p>
+    <ul>
+      <li>Création de contrôleurs REST avec Spring MVC.</li>
+      <li>Gestion des requêtes HTTP, des réponses, et utilisation de ResponseEntity.</li>
+      <li>Validation des données d'entrée.</li>
+    </ul>
+
+    <p>Accès aux données :</p>
+    <ul>
+      <li>Introduction à Spring Data JPA pour l'intégration de bases de données.</li>
+      <li>Configuration d'une source de données et création de repositories.</li>
+      <li>Transactions et gestion des exceptions de la couche d'accès aux données.</li>
+    </ul>
+
+  </div>
+
+  <div *ngIf="selectedOption == 'html' ">
+    <p> here is the html  Work In Progress</p>
+  </div>
+
+  <div *ngIf="selectedOption == 'css' ">
+    <p> here is the css  Work In Progress</p>
+  </div>
+
+  <div *ngIf="selectedOption == 'javascript' ">
+    <p> here is the javascript  Work In Progress</p>
+  </div>
+
+  <div *ngIf="selectedOption == 'angular' ">
+    <p> here is the angular  Work In Progress</p>
+  </div>
+
+
+
+</div>
+

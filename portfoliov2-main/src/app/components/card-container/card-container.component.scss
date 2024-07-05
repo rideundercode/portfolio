@@ -1,0 +1,60 @@
+.card-container-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50; /* Dark blue color to match the site's color scheme */
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern font family */
+}
+.card-container {
+    display: flex;
+    justify-content: space-around; // Cela répartit les cartes uniformément dans le conteneur
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px; // Ajoute un espace entre les cartes
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(33% - 40px); // Prend 33% du conteneur en tenant compte du 'gap'
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ccc; // Couleur de bordure gris clair
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre portée légère
+    border-radius: 10px; // Coins arrondis
+    background-color: #fff; // Fond blanc
+    height: 20rem; // Hauteur fixe, ajustez selon votre contenu
+    overflow: hidden; /* Ajoutez ceci pour éviter tout débordement */
+
+  
+    &:hover {
+      transform: translateY(-5px); // Légère élévation au survol
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Ombre plus prononcée au survol
+    }
+  
+    &.selected {
+      border-color: #000; // Bordure plus foncée lorsque la carte est sélectionnée
+    }
+  
+  // Style pour le texte à l'intérieur de la carte
+  .card-icon {
+    max-width: 100%; /* Ajoutez ceci pour limiter la largeur de l'image */
+    max-height: 50%; /* Ajoutez ceci pour limiter la hauteur de l'image */
+    object-fit: contain; /* Ceci assure que l'image est redimensionnée en respectant ses proportions */
+  }
+  
+  .card-title {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+}
+  

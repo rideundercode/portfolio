@@ -1,0 +1,56 @@
+.navbar {
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 2px; // ajustez cette valeur pour décaler le logo vers la droite si nécessaire
+    img {
+      margin-right: 0.5rem;
+    }
+    span {
+      display: block;
+      font-weight: bold; // Cela rendra le texte "RYDNA" en gras
+    }
+    small {
+      display: block;
+      font-size: 0.75rem;
+      position: relative; // Ajout pour permettre le décalage horizontal
+      left: 10px; // ajustez cette valeur pour décaler le slogan vers la droite
+      font-family: "VotreFont", sans-serif; // Remplacez "VotreFont" par le nom de votre police personnalisée
+    }
+  }
+  
+  .navbar-nav {
+    .nav-item {
+      margin-right: 1rem; // Ajustez l'espacement entre les onglets selon vos besoins
+      &:last-child {
+        margin-right: 0; // Le dernier élément ne doit pas avoir de marge à droite pour un alignement correct
+      }
+    }
+  }
+  
+  .navbar-toggler {
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  
+  .nav-link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-brand {
+    justify-content: center;
+    .d-none.d-lg-inline {
+      display: inline !important; // Cela outrepasse la classe 'd-none' de Bootstrap
+    }
+    // Ajustement spécifique pour le slogan sur les petits écrans
+    small {
+      left: 0; // Annule le décalage horizontal sur les petits écrans
+    }
+  }
+}

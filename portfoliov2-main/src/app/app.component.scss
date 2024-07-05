@@ -1,0 +1,23 @@
+/* CSS pour introduction.component.css */
+:host {
+    display: block; /* Pour Angular :host */
+  }
+  
+  .introduction-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Diviser en deux colonnes */
+    grid-gap: 1rem;
+    align-items: center; /* Aligner verticalement */
+  }
+  
+  .introduction-text,
+  .introduction-image {
+    padding: 1rem;
+  }
+  
+  @media (max-width: 768px) { /* Pour les petits écrans, passez à une mise en page en colonne */
+    .introduction-container {
+      grid-template-columns: 1fr; /* Empilez le texte et l'image sur les petits écrans */
+    }
+  }
+  

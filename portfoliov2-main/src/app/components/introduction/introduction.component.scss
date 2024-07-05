@@ -1,0 +1,93 @@
+.introduction-container {
+  display: grid;
+  grid-template-columns: 11fr 5fr; 
+  align-items: center;
+  gap: 20px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern font family */
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue color to match the site's color scheme */
+
+}
+
+.introduction-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Centrer verticalement les éléments dans leur conteneur flex
+  align-items: center;
+  margin-left: 20px;
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0; // Enlevez la marge à gauche
+  }
+
+  p {
+    font-size: 2rem;
+    margin-left: 0; // Enlevez également la marge à gauche pour le paragraphe
+
+  }
+
+  .heart-icon {
+    color: red;
+    font-size: 2rem;
+  }
+}
+
+.introduction-image {
+  display: flex;
+  justify-content: center; // Centre horizontalement l'image dans la div
+  align-items: center; // Centre verticalement l'image dans la div
+  height: 100%; // Assurez-vous que la div prend toute la hauteur disponible
+
+  img {
+    width: auto; // Utilisez 'auto' pour maintenir l'aspect ratio de l'image
+    max-width: 100%; // S'assure que l'image ne dépasse pas sa div conteneur
+    max-height: 100%; // Empêche l'image de dépasser la hauteur de la div
+  }
+}
+
+// Media Query pour les écrans moyens
+@media (max-width: 992px) {
+  .introduction-container {
+    grid-template-columns: 1fr; // Empile les éléments
+    padding-top: 5rem; // Réduit le padding sur le haut
+  }
+  .introduction-text {
+    h1 {
+      font-size: 4rem; // Diminuez la taille de la police pour le titre
+      margin-left: 4rem; // Réduisez le margin-left
+    }
+    p {
+      font-size: 1.5rem; // Diminuez la taille de la police pour le paragraphe
+      margin-left: 4rem; // Réduisez le margin-left
+    }
+  }
+}
+
+// Media Query pour les petits écrans
+@media (max-width: 768px) {
+  .introduction-container {
+    padding-top: 2rem; // Réduit encore plus le padding sur le haut
+  }
+  .introduction-text,
+  .introduction-image {
+    justify-content: center; // Centre les éléments sur les petits écrans
+    align-items: center;
+  }
+  .introduction-text {
+    h1 {
+      font-size: 3rem; // Réduit la taille de la police
+      margin: 0 2rem; // Ajoutez un margin horizontal pour éviter que le texte touche les bords
+    }
+    p {
+      font-size: 1.2rem; // Réduit la taille de la police
+      margin: 1rem 2rem; // Ajoutez un margin pour le paragraphe
+    }
+    .heart-icon {
+      font-size: 1.5rem; // Réduisez la taille du cœur
+    }
+  }
+}

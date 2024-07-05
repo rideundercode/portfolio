@@ -1,0 +1,32 @@
+<!-- content-card-three.component.html -->
+
+<section class="alternate-section container my-5">
+    <!-- Section Title and Description -->
+    <div class="row">
+        <div class="col text-center mb-4">
+          <h2 class="section-title">Client Project Example</h2>
+          <p class="section-description">From initial sketches to the finished website on Wix, this journey showcases our adaptability and commitment to client vision.</p>
+        </div>
+      </div>
+      
+  
+    <!-- Alternating Rows of Content -->
+    <ng-container *ngFor="let item of projectItems; let i = index">
+      <div class="row align-items-center mb-5" [ngClass]="{'row-reverse': i % 2 !== 0}">
+        
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img [src]="item.imageUrl" [alt]="item.title" class="img-fluid rounded">
+        </div>
+        
+        <!-- Text -->
+        <div class="col-lg-6">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+          <!-- Optional Link -->
+          <a *ngIf="item.link && item.linkText" [href]="item.link" target="_blank" rel="noopener noreferrer">{{ item.linkText }}</a>
+        </div>
+      </div>
+    </ng-container>
+  </section>
+  

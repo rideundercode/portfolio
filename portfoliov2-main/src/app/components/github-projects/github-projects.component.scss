@@ -1,0 +1,145 @@
+#carouselExampleControls {
+    width: 60%;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Softer shadow for a cleaner look */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background: #fff; /* Keeping the background white to maintain a clean look */
+  }
+  
+  .carousel-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50; /* Dark blue color to match the site's color scheme */
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern font family */
+  }
+  
+  .carousel-inner {
+    transition: transform 0.5s ease;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+  .card {
+    margin: 0.5rem;
+    flex: 0 1 calc(33.333% - 1rem);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Lighter shadow for the cards */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Adding a slight scale effect on hover */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .card-img-top {
+    height: 200px; /* Or any other fixed height */
+    object-fit: cover; /* This will ensure that your images cover the area without stretching */
+    width: 100%; /* This will ensure the image covers the full width of the card */
+    border-top-left-radius: 5px; /* To maintain the rounded corners on top-left */
+    border-top-right-radius: 5px; /* To maintain the rounded corners on top-right */
+  }
+  
+  
+  .carousel-controls {
+    position: absolute;
+    width: calc(100% - 4rem); /* Reduce width to avoid edge overlap */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem; /* Adding padding to the sides */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 24px;
+    color: #7f8c8d; /* Soft gray for a gentle look */
+    user-select: none;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 100%, 100%;
+    text-align: center;
+  }
+  
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    content: '';
+    padding: 5px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #7f8c8d; /* Same color as the control icons */
+  }
+  
+
+
+  /* Adjusting the carousel control icons to match the 'Download CV' button color */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* ... existing styles ... */
+  background-color: black; /* Same color as 'Download CV' button */
+}
+
+/* If you have hover effects */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: darken(black, 10%);
+}
+  
+/* Button styling to match the site's theme */
+.btn-primary {
+    background-color: white; /* Your primary color */
+    border-color:  grey; /* Same color for border */
+    color: black;
+    font-weight: bold; /* White text */
+    padding: 0.375rem 0.75rem; /* Standard padding, but can be adjusted */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.5; /* Standard line height for buttons */
+    border-radius: 0.25rem; /* Adjust to match the site's button border-radius */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: darken( #FF6B6B, 10%); /* Darken function to reduce brightness on hover */
+    border-color: darken( #FF6B6B, 10%);
+    color: #fff; /* Keeping the text white on hover for readability */
+  }
+  
+  /* You might want to style the focus state separately for accessibility */
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.5); /* Glowing effect to indicate focus */
+  }
+  
+
+  /* Responsiveness */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* For tablets: Show 2 cards */
+    .cards-wrapper .card {
+      flex: 0 1 calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* For mobile phones: Show 1 card */
+    .cards-wrapper .card {
+      flex: 0 1 100%;
+    }
+  }
+  

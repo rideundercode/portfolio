@@ -1,0 +1,26 @@
+<div class="contact-container">
+    <div class="avatar-container">
+      <!-- Put your avatar image here -->
+      <img src="../../../assets/avatar_contact.png" alt="Your Avatar">
+    </div>
+
+<div class="contact-form-container">
+    <h2>Contact Me</h2>
+    <h3>The formulary is not avaiable for now contact me at this mobile phone: 0649186545 or at this email: mohamed.mahtali&#64;gmail.com</h3>
+    <form class="contact-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="timeline">
+    <div class="cv-download">
+        <a href="../../../assets/cv (10).pdf" download="MAHTALI_Mohamed_CV.pdf" class="btn-download-cv">Download CV</a>
+      </div>      
+    <div *ngFor="let item of items; let i = index" class="timeline-item" [ngClass]="{'right': i % 2 === 0}">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>{{ item.title }}</h3>
+        <span class="date">{{ item.date }}</span><br>
+        <span class="location">{{ item.location }}</span>
+
+        <ul>
+            <ol *ngFor="let point of item.description">{{ point }}</ol>
+        </ul>
+        </div>
+    </div>
+  </div>
+  

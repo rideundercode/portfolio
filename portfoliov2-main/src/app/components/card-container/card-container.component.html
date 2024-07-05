@@ -1,0 +1,25 @@
+<h2 class="card-container-title">Are you a ...</h2>
+<div class="card-container">
+  <!-- Card 1 avec icône et texte -->
+  <div class="card" [class.selected]="selectedCard === 1" (click)="selectCard(1)">
+    <img src="../../../assets/student.png" class="card-icon" alt="Student">
+    <div class="card-title">Student</div>
+  </div>
+
+  <!-- Card 2 avec icône et texte -->
+  <div class="card" [class.selected]="selectedCard === 2" (click)="selectCard(2)">
+    <img src="../../../assets/companie.png" class="card-icon" alt="Company">
+    <div class="card-title">Company</div>
+  </div>
+
+  <!-- Card 3 avec icône et texte -->
+  <div class="card" [class.selected]="selectedCard === 3" (click)="selectCard(3)">
+    <img src="../../../assets/client.png" class="card-icon" alt="Client">
+    <div class="card-title">Client</div>
+  </div>
+</div>
+
+<!-- Content Components -->
+<app-content-card-one *ngIf="selectedCard === 1"></app-content-card-one>
+<app-content-card-two *ngIf="selectedCard === 2"></app-content-card-two>
+<app-content-card-three *ngIf="selectedCard === 3"></app-content-card-three>

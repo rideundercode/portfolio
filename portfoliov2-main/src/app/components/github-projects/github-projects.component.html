@@ -1,0 +1,31 @@
+<!-- https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/ -->
+<h2 class="carousel-title">GitHub Projects</h2>
+<div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <!-- Utilisez 'let i = index' pour obtenir l'index de chaque groupe de cartes et activez la slide basée sur 'activeSlideIndex' -->
+      <div class="carousel-item" *ngFor="let cardGroup of cardGroups; let i = index" [class.active]="i === activeSlideIndex">
+        <div class="cards-wrapper">
+          <!-- Affichez trois cartes pour chaque slide -->
+          <div class="card" *ngFor="let card of cardGroup">
+            <img [src]="card.imgUrl" class="card-img-top" [alt]="card.title">
+            <div class="card-body">
+              <h5 class="card-title">{{ card.title }}</h5>
+              <p class="card-text">{{ card.text }}</p>
+              <p class="card-tech">{{ card.tech }}</p>
+              <a [href]="card.linkUrl" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Utilisez '(click)' pour appeler les méthodes 'prevSlide()' et 'nextSlide()' -->
+    <a class="carousel-control-prev" role="button" (click)="prevSlide()" aria-label="Previous Slide">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" role="button" (click)="nextSlide()" aria-label="Next Slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+  </div>
+  
+  

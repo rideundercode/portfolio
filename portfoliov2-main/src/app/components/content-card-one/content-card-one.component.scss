@@ -1,0 +1,69 @@
+/* Ajoutez ces styles dans content-card-one.component.scss ou styles.scss */
+
+.content-card-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto; /* Uniformisez l'espacement en haut et en bas */
+  margin-bottom: 300px;
+
+}
+
+.content-card-one h2 {
+  text-align: center;
+  margin-bottom: 1rem; /* Espacement en dessous du titre */
+}
+
+.custom-select {
+  width: 50%; /* Ajustez selon la largeur désirée, 50% pour commencer */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  background-color: white;
+  box-shadow: 0 1px 3px  rgba(0, 0, 0, 0.1);
+  appearance: none; /* Supprimer le style natif pour les navigateurs */
+  -webkit-appearance: none; /* Supprimer le style natif pour Safari */
+  -moz-appearance: none; /* Supprimer le style natif pour Firefox */
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 16px 16px; /* Taille de l'icône flèche */
+}
+
+.custom-select:focus {
+  border-color: #666;
+  outline: none; /* Supprimez le contour de mise au point pour un style personnalisé */
+}
+
+/* Style pour le contenu affiché en fonction de l'option choisie */
+.content-card-one div {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  /* Continuez avec vos styles existants... */
+}
+
+
+.technology-details {
+  max-width: 800px; /* Ajustez selon la largeur souhaitée */
+  margin: auto; /* Pour centrer le contenu */
+  text-align: left; /* Pour aligner le texte à gauche */
+  background: #fff; /* Couleur de fond */
+  padding: 20px; /* Padding autour du contenu */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+.technology-details h3 {
+  text-align: center; /* Centrez le titre de la section */
+}
+
+.technology-details .tech-image {
+  width: 100%; /* Pleine largeur */
+  height: auto; /* Hauteur automatique pour maintenir les proportions */
+  margin-bottom: 20px; /* Espacement sous l'image */
+}
+
+.technology-details ul {
+  list-style: inside square; /* Style de la liste */
+}
